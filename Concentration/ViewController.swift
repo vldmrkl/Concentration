@@ -14,27 +14,17 @@ class ViewController: UIViewController {
 			flipCountLabel.text = "Flips: \(flipCount)"
 		}
 	}
+	let emojiChoices = ["🦉", "🐅", "🦉", "🐅"]
+
 	@IBOutlet var cardButtons: [UIButton]!
 	@IBOutlet weak var flipCountLabel: UILabel!
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
-	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
-	let emojiChoices = ["🦉", "🐅", "🦉", "🐅"]
 	
 	@IBAction func touchCard(_ sender: UIButton) {
 		if let cardIndex = cardButtons.index(of: sender) {
 			flipCount += 1
 			flipCard(withEmoji: emojiChoices[cardIndex], on: sender)
 		} else {
-			print("Clicked button in not in button array.")
+			print("Clicked button which is not in button array.")
 		}
 		
 	}
