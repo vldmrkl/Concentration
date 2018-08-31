@@ -9,36 +9,54 @@
 import UIKit
 
 class ViewController: UIViewController {
+	lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count+1)/2)
+	
 	var flipCount = 0 {
 		didSet {
 			flipCountLabel.text = "Flips: \(flipCount)"
 		}
 	}
-	let emojiChoices = ["🦉", "🐅", "🦉", "🐅"]
 
 	@IBOutlet var cardButtons: [UIButton]!
 	@IBOutlet weak var flipCountLabel: UILabel!
 	
 	@IBAction func touchCard(_ sender: UIButton) {
+		flipCount += 1
 		if let cardIndex = cardButtons.index(of: sender) {
-			flipCount += 1
-			flipCard(withEmoji: emojiChoices[cardIndex], on: sender)
+			game.chooseCard(at: cardIndex)
+			updateViewFromModel()
 		} else {
 			print("Clicked button which is not in button array.")
 		}
 		
 	}
 	
-	func flipCard(withEmoji emoji: String, on button: UIButton) {
-		if button.currentTitle == emoji {
-			button.setTitle("", for: UIControlState.normal)
-			button.backgroundColor = #colorLiteral(red: 0, green: 0.4506722689, blue: 0.8753119111, alpha: 1)
-		} else{
-			button.setTitle(emoji, for: UIControlState.normal)
-			button.backgroundColor = #colorLiteral(red: 0.1146613732, green: 0.6848543286, blue: 1, alpha: 1)
+	func updateViewFromModel(){
+		for index in cardButtons.indices{
+			let button = cardButtons[index]
+			let card = game.cards[index]
+			if card.isFacedUp {
+				button.setTitle(emoji(for: card), for: UIControlState.normal)
+				button.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+			} else {
+				button.setTitle("", for: UIControlState.normal)
+				button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 0, green: 0.4506722689, blue: 0.8753119111, alpha: 1)
+			}
 		}
 	}
 	
-
+	var emojiChoices = ["🦉", "🐙", "🙊", "🐼", "🐯", "🐲", "🍔", "🍕", "🍟"]
+	var emoji = [Int:String]()
+	
+	func emoji(for card: Card) -> String {
+		if emoji[card.id] == nil{
+			if emojiChoices.count > 0{
+				let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
+				emoji[card.id] = emojiChoices.remove(at: randomIndex)
+			}
+		}
+		return emoji[card.id] ?? "?"
+	}
+	
 }
 
