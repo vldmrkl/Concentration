@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,180 +19,196 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flips: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3E-kP-A9l">
-                                <rect key="frame" x="16" y="55" width="161" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KVH-NB-pOV">
+                                <rect key="frame" x="16" y="44" width="343" height="304"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="p8A-TC-XRG">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEe-Wj-okW">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261218149642" green="0.44232684660986343" blue="0.84632043393782386" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="oIV-Mp-6cj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqZ-mO-4Gc">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="80.000000000000014" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="kvA-fp-bE8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFg-5s-sA9">
+                                                <rect key="frame" x="175.66666666666666" y="0.0" width="79.666666666666657" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="yHE-9g-mXH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbI-4D-bjM">
+                                                <rect key="frame" x="263.33333333333331" y="0.0" width="79.666666666666686" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="axK-hl-xY1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="H49-m0-5cz">
+                                        <rect key="frame" x="0.0" y="78" width="343" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0Q-D0-b9L">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="6K6-e2-0Nm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isE-Gt-0hd">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="80.000000000000014" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="VoH-W1-hJz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXP-Dl-k9X">
+                                                <rect key="frame" x="175.66666666666666" y="0.0" width="79.666666666666657" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="rNX-ct-gdD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haH-M7-J7b">
+                                                <rect key="frame" x="263.33333333333331" y="0.0" width="79.666666666666686" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="iwP-Qw-S8U"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u6t-a5-F6w">
+                                        <rect key="frame" x="0.0" y="156" width="343" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdG-qZ-ekb">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="m7r-hx-ahG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5o-4k-KCv">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="80.000000000000014" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="DT2-fJ-EfA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcB-ps-DhF">
+                                                <rect key="frame" x="175.66666666666666" y="0.0" width="79.666666666666657" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="XXK-FJ-51I"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrF-Tu-N8c">
+                                                <rect key="frame" x="263.33333333333331" y="0.0" width="79.666666666666686" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="azJ-CW-uV3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NUZ-EU-NId">
+                                        <rect key="frame" x="0.0" y="234" width="343" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuS-Ft-b6Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="Hm7-RK-73C"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTx-2r-tvj">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="80.000000000000014" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="vnL-8W-KSl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNH-GD-9ba">
+                                                <rect key="frame" x="175.66666666666666" y="0.0" width="79.666666666666657" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="hCM-ZN-fdq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-bn-Tdq">
+                                                <rect key="frame" x="263.33333333333331" y="0.0" width="79.666666666666686" height="70"/>
+                                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="DIQ-zx-dhO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3E-kP-A9l">
+                                <rect key="frame" x="133.33333333333334" y="736" width="108.66666666666666" height="42"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEe-Wj-okW">
-                                <rect key="frame" x="16" y="104" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261218149642" green="0.44232684660986343" blue="0.84632043393782386" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="oIV-Mp-6cj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqZ-mO-4Gc">
-                                <rect key="frame" x="104" y="104" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="kvA-fp-bE8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFg-5s-sA9">
-                                <rect key="frame" x="191" y="104" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="yHE-9g-mXH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbI-4D-bjM">
-                                <rect key="frame" x="279" y="104" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="axK-hl-xY1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0Q-D0-b9L">
-                                <rect key="frame" x="16" y="230" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="6K6-e2-0Nm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isE-Gt-0hd">
-                                <rect key="frame" x="104" y="230" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="VoH-W1-hJz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXP-Dl-k9X">
-                                <rect key="frame" x="191" y="230" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="rNX-ct-gdD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haH-M7-J7b">
-                                <rect key="frame" x="279" y="230" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="iwP-Qw-S8U"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdG-qZ-ekb">
-                                <rect key="frame" x="16" y="356" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="m7r-hx-ahG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5o-4k-KCv">
-                                <rect key="frame" x="104" y="356" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="DT2-fJ-EfA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcB-ps-DhF">
-                                <rect key="frame" x="191" y="356" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="XXK-FJ-51I"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrF-Tu-N8c">
-                                <rect key="frame" x="279" y="356" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="azJ-CW-uV3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuS-Ft-b6Q">
-                                <rect key="frame" x="16" y="485" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="Hm7-RK-73C"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTx-2r-tvj">
-                                <rect key="frame" x="104" y="485" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="vnL-8W-KSl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNH-GD-9ba">
-                                <rect key="frame" x="191" y="485" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="hCM-ZN-fdq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-bn-Tdq">
-                                <rect key="frame" x="279" y="485" width="80" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.070621261219999995" green="0.44232684659999999" blue="0.8463204339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchDown" id="DIQ-zx-dhO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KVH-NB-pOV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1Kw-Rt-mwe"/>
+                            <constraint firstItem="KVH-NB-pOV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9Fk-W7-CqI"/>
+                            <constraint firstItem="r3E-kP-A9l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KVH-NB-pOV" secondAttribute="bottom" constant="8" symbolic="YES" id="LHr-lm-lQk"/>
+                            <constraint firstItem="r3E-kP-A9l" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q6N-Mc-wrg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r3E-kP-A9l" secondAttribute="bottom" id="fuJ-Zr-qoC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KVH-NB-pOV" secondAttribute="trailing" constant="16" id="qfc-cd-fDN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="r3E-kP-A9l" id="f4i-H3-fzI"/>
                         <outletCollection property="cardButtons" destination="xEe-Wj-okW" collectionClass="NSMutableArray" id="FPn-Rc-lnR"/>
-                        <outletCollection property="cardButtons" destination="wqZ-mO-4Gc" collectionClass="NSMutableArray" id="gs9-hn-eUH"/>
                         <outletCollection property="cardButtons" destination="xFg-5s-sA9" collectionClass="NSMutableArray" id="Str-5C-YMV"/>
+                        <outletCollection property="cardButtons" destination="wqZ-mO-4Gc" collectionClass="NSMutableArray" id="gs9-hn-eUH"/>
                         <outletCollection property="cardButtons" destination="UbI-4D-bjM" collectionClass="NSMutableArray" id="Ugm-ew-XDa"/>
-                        <outletCollection property="cardButtons" destination="D0Q-D0-b9L" collectionClass="NSMutableArray" id="iJ6-58-9C1"/>
-                        <outletCollection property="cardButtons" destination="isE-Gt-0hd" collectionClass="NSMutableArray" id="8IO-ag-fmX"/>
-                        <outletCollection property="cardButtons" destination="PXP-Dl-k9X" collectionClass="NSMutableArray" id="e0N-wQ-fP0"/>
                         <outletCollection property="cardButtons" destination="haH-M7-J7b" collectionClass="NSMutableArray" id="mpU-1a-t2z"/>
-                        <outletCollection property="cardButtons" destination="xdG-qZ-ekb" collectionClass="NSMutableArray" id="Kdm-EZ-5xX"/>
-                        <outletCollection property="cardButtons" destination="X5o-4k-KCv" collectionClass="NSMutableArray" id="WEH-nT-lhd"/>
+                        <outletCollection property="cardButtons" destination="PXP-Dl-k9X" collectionClass="NSMutableArray" id="e0N-wQ-fP0"/>
+                        <outletCollection property="cardButtons" destination="isE-Gt-0hd" collectionClass="NSMutableArray" id="8IO-ag-fmX"/>
+                        <outletCollection property="cardButtons" destination="D0Q-D0-b9L" collectionClass="NSMutableArray" id="iJ6-58-9C1"/>
                         <outletCollection property="cardButtons" destination="VcB-ps-DhF" collectionClass="NSMutableArray" id="6gN-dN-ew3"/>
+                        <outletCollection property="cardButtons" destination="X5o-4k-KCv" collectionClass="NSMutableArray" id="WEH-nT-lhd"/>
                         <outletCollection property="cardButtons" destination="jrF-Tu-N8c" collectionClass="NSMutableArray" id="FMy-gN-lXn"/>
+                        <outletCollection property="cardButtons" destination="xdG-qZ-ekb" collectionClass="NSMutableArray" id="Kdm-EZ-5xX"/>
                         <outletCollection property="cardButtons" destination="KuS-Ft-b6Q" collectionClass="NSMutableArray" id="sAh-LJ-mJN"/>
-                        <outletCollection property="cardButtons" destination="pTx-2r-tvj" collectionClass="NSMutableArray" id="fhK-Je-1n7"/>
-                        <outletCollection property="cardButtons" destination="vNH-GD-9ba" collectionClass="NSMutableArray" id="6xl-Nd-FAs"/>
                         <outletCollection property="cardButtons" destination="Uge-bn-Tdq" collectionClass="NSMutableArray" id="fCX-jj-Gow"/>
+                        <outletCollection property="cardButtons" destination="vNH-GD-9ba" collectionClass="NSMutableArray" id="6xl-Nd-FAs"/>
+                        <outletCollection property="cardButtons" destination="pTx-2r-tvj" collectionClass="NSMutableArray" id="fhK-Je-1n7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
