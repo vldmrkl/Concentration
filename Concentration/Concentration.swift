@@ -11,7 +11,27 @@ import Foundation
 class Concentration {
 	var cards = [Card]()
 	
-	var indexOfTheOnlyFacedUpCard: Int?
+	var indexOfTheOnlyFacedUpCard: Int? {
+		get{
+			var foundIndex: Int?
+			for index in cards.indices{
+				if cards[index].isFacedUp {
+					if foundIndex == nil{
+					foundIndex = index
+					}
+				 else{
+					return nil
+				}
+			}
+			}
+			return foundIndex
+		}
+		set{
+			for index in cards.indices {
+				cards[index].isFacedUp = (index == newValue)
+			}
+		}
+	}
 	
 	func chooseCard(at index: Int){
 		if !cards[index].isMatched{
@@ -21,13 +41,7 @@ class Concentration {
 					cards[matchIndex].isMatched = true
 				}
 				cards[index].isFacedUp = true
-				indexOfTheOnlyFacedUpCard = nil
 			} else{
-				//either 2 cards or no cards are faced up
-				for flipDownIndex in cards.indices{
-					cards[flipDownIndex].isFacedUp = false
-				}
-				cards[index].isFacedUp = true
 				indexOfTheOnlyFacedUpCard = index
 			}
 		}
