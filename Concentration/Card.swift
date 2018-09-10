@@ -13,8 +13,8 @@ struct Card{
 	var isMatched = false
 	var id: Int
 	
-	static var idFactory = 0;
-	static func generateUniqueCardId() -> Int{
+	private static var idFactory = 0;
+	private static func generateUniqueCardId() -> Int{
 		Card.idFactory += 1
 		return Card.idFactory
 	}

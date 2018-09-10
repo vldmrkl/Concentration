@@ -9,9 +9,9 @@
 import Foundation
 
 class Concentration {
-	var cards = [Card]()
+	private(set) var cards = [Card]()
 	
-	var indexOfTheOnlyFacedUpCard: Int? {
+	private var indexOfTheOnlyFacedUpCard: Int? {
 		get{
 			var foundIndex: Int?
 			for index in cards.indices{
@@ -34,6 +34,7 @@ class Concentration {
 	}
 	
 	func chooseCard(at index: Int){
+		assert(cards.indices.contains(index), "chooseCard(at: \(index)): index is out of bounds")
 		if !cards[index].isMatched{
 			if let matchIndex = indexOfTheOnlyFacedUpCard, matchIndex != index {
 				if cards[matchIndex].id == cards[index].id {
@@ -58,6 +59,7 @@ class Concentration {
 	}
 	
 	init(numberOfPairsOfCards: Int){
+		assert(numberOfPairsOfCards > 0, "numberOfPairsOfCards is <= 0")
 		for _ in 1...numberOfPairsOfCards{
 			let card = Card()
 			// add pair of cards to array
