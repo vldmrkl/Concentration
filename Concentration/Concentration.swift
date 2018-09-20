@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Concentration {
+struct Concentration {
 	private(set) var cards = [Card]()
 	
 	private var indexOfTheOnlyFacedUpCard: Int? {
@@ -33,11 +33,11 @@ class Concentration {
 		}
 	}
 	
-	func chooseCard(at index: Int){
+	mutating func chooseCard(at index: Int){
 		assert(cards.indices.contains(index), "chooseCard(at: \(index)): index is out of bounds")
 		if !cards[index].isMatched{
 			if let matchIndex = indexOfTheOnlyFacedUpCard, matchIndex != index {
-				if cards[matchIndex].id == cards[index].id {
+				if cards[matchIndex] == cards[index] {
 					cards[index].isMatched = true
 					cards[matchIndex].isMatched = true
 				}
@@ -48,7 +48,7 @@ class Concentration {
 		}
 	}
 	
-	func shuffleCards(){
+	mutating func shuffleCards(){
 		var shuffledCards = [Card]()
 		while !cards.isEmpty {
 			let randomIndex = Int(arc4random_uniform(UInt32(cards.count)))
