@@ -50,15 +50,15 @@ class ViewController: UIViewController {
 	}
 	
 	private var emojiChoices = ["🦉", "🐙", "🙊", "🐼", "🐯", "🐲", "🍔", "🍕", "🍟"]
-	private var emoji = [Int:String]()
+	private var emoji = [Card:String]()
 	
 	private func emoji(for card: Card) -> String {
-		if emoji[card.id] == nil{
+		if emoji[card] == nil{
 			if emojiChoices.count > 0{
-				emoji[card.id] = emojiChoices.remove(at: emojiChoices.count.randomNumber)
+				emoji[card] = emojiChoices.remove(at: emojiChoices.count.randomNumber)
 			}
 		}
-		return emoji[card.id] ?? "?"
+		return emoji[card] ?? "?"
 	}
 }
 
