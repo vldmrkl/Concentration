@@ -179,6 +179,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChX-FY-Uw5">
+                                <rect key="frame" x="133" y="689" width="109" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.024367488736004538" blue="0.80005037784576416" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="startNewGame:" destination="BYZ-38-t0r" eventType="touchDown" id="rd3-Dp-kJW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -193,6 +202,7 @@
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="r3E-kP-A9l" id="f4i-H3-fzI"/>
+                        <outlet property="newGameButton" destination="ChX-FY-Uw5" id="aUJ-pt-MSl"/>
                         <outletCollection property="cardButtons" destination="xEe-Wj-okW" collectionClass="NSMutableArray" id="FPn-Rc-lnR"/>
                         <outletCollection property="cardButtons" destination="xFg-5s-sA9" collectionClass="NSMutableArray" id="Str-5C-YMV"/>
                         <outletCollection property="cardButtons" destination="wqZ-mO-4Gc" collectionClass="NSMutableArray" id="gs9-hn-eUH"/>
@@ -213,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-76" y="133.00492610837438"/>
+            <point key="canvasLocation" x="-77.599999999999994" y="131.52709359605913"/>
         </scene>
     </scenes>
 </document>
